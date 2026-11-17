@@ -3,53 +3,49 @@
   <img src="assets/header-light.svg" alt="ZHOU · AI 应用与开发工具" width="100%">
 </picture>
 
-**做让多个 AI 模型协同干活的工具。** 独立设计并实现了多模型编程协作平台「接力台」（约 2.5 万行 TypeScript / JavaScript，191 项自动化测试）、多模型会审插件 council，并向 AI 编程工具生态贡献插件与 PR。正在寻找 **AI 应用开发 / AI 工具开发** 岗位。
+做 AI 应用和开发工具，关注的是怎样让多个模型分工合作、互相复核，并且用测试和评测确认结果可靠。2026 年 7 月以来和 Claude Code、Codex、Kimi 一起做了 9 个项目，正在找 AI 应用开发 / AI 工具开发方向的工作。
 
-🌐 **作品集网站：[zhousun55-byte.github.io](https://zhousun55-byte.github.io)**（带界面截图）
+全部作品：**[zhousun55-byte.github.io](https://zhousun55-byte.github.io)**
 
-<p>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/LLM%20Agents-Claude%20Code%20%7C%20Codex%20%7C%20DeepSeek-555">
-  <img src="https://img.shields.io/badge/Prompt%20%26%20Eval-多模型投票%20%2F%20交叉复核-555">
-</p>
+常用：TypeScript · Node.js · Python · MCP · Claude Code · Codex · GitHub Actions
 
 ## 代表项目
 
-### 🏃 RelayDesk · 接力台 — 多模型编程协作平台
+**[RelayDesk 接力台](projects/relaydesk.md)** · 多模型编程协作平台
 
-一个 AI 的额度用完、卡住或出错时，自动换另一个 AI 接着做，并留下可检查的交接、快照和复核记录。
+一个模型额度用完、卡住或出错时，自动换另一个模型接着做，每一棒留下交接单和文件快照，可以复核也可以退回。
 
-- **换 Agent 继续**：读取 Claude Code / Codex 的本地会话，还原对话主线，带着上下文交给另一个模型接手
-- **强弱模型分工**：强模型拆任务、弱模型执行、强模型复核；额度用完自动换人，失败可一键退回快照
-- **群聊决策**：多个模型匿名出方案、互投（不能投自己），再由强模型当主席汇总，结论写进任务约定
-- **安全设计**：项目内容一律按不可信处理——检查命令需本机确认、拒绝符号链接越界写入、发给模型前自动抹掉密钥
-- **工程质量**：命令行 + 本地网页（中英双语、深色模式、窄屏适配），191 项测试覆盖调度、解析、隔离与安全反例
+- 读取 Claude Code / Codex 的本地会话，带着对话主线交给另一个模型接手
+- 强模型拆任务和复核，便宜的模型执行，额度用完自动换人
+- 多个模型匿名出方案、互相投票，再由强模型汇总，结论写进任务约定
+- 项目内容按不可信处理：检查命令要本机确认，拒绝越界写入，发给模型前抹掉密钥
+- 约 2.5 万行 TypeScript / JavaScript，191 项自动化测试
 
-[设计与实现 →](projects/relaydesk.md)　·　源码私有，面试可现场演示
+源码私有，面试可现场演示。
 
-### 🗳️ council — 多模型会审插件（MCP）
+**[council](https://github.com/zhousun55-byte/magpie-council)** · 多模型会审插件（MCP）
 
-给 magpie 写的 MCP 工具：几个模型同问一个问题、匿名投票，或请另一家的模型评审代码。零配置，每个模型走自己的原生接口，按故障类型自动冷却、慢模型自动找替身。25 项测试，CI 通过。
+几个模型同问一个问题、匿名投票，或请另一家的模型评审代码。按故障类型自动冷却，慢的模型自动找替身。25 项测试，CI 通过，已向上游提交 [PR #646](https://github.com/magpie-community/plugins/pull/646)。
 
-[源码 →](https://github.com/zhousun55-byte/magpie-council)　·　[上游 PR #646](https://github.com/magpie-community/plugins/pull/646)
+**[dsh-postman](projects/dsh-postman.md)** · DeepSeek Harness 文件投递插件
 
-### 📎 dsh-postman — DeepSeek Harness 文件投递插件
+在会话里直接选文件或文件夹，图片作为附件，文本写进草稿。已被两份生态目录收录。
 
-在 DeepSeek Harness 会话里选文件或文件夹，图片走消息附件，文本写进草稿。已被两份生态目录收录。
+## 其他作品
 
-[项目说明 →](projects/dsh-postman.md)　·　[源码](https://github.com/zhousun55-byte/dsh-postman)
+| 项目 | 做了什么 |
+| --- | --- |
+| K线阅读 | TradingView 读盘指标，681 次提交；用体检脚本核对 AI 写的文档和代码是否一致 |
+| 交易知识库与问答技能 | Obsidian 知识库加两个 Claude Code 技能：按问题定位相关页面作答、定期追踪来源更新 |
+| Jev 中文判别基准 | 用 57 篇真实笔记测小模型的中文归类能力，去掉会泄露答案的字段，结果可复现 |
+| 摄影作品集网站 | React + TypeScript + Vite，为国内访问做了资源本地化 |
+
+这几个项目是私有的，介绍见[作品集网站](https://zhousun55-byte.github.io/#works)。
 
 ## 开源贡献
 
 | 贡献 | 状态 |
 | --- | --- |
-| [magpie-community/plugins #646](https://github.com/magpie-community/plugins/pull/646)：council 多模型插件（并行提问、匿名投票、交叉评审） | 评审中 |
-| [awesome-dsh-plugin #1153](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1153)：收录 dsh-postman | ✅ 已合并 |
-| [awesome-deepseek-harness #308](https://github.com/0xsline/awesome-deepseek-harness/pull/308)：收录 dsh-postman | ✅ 已合并 |
-
-## 我在想的问题
-
-- 换一个模型接手时，怎样只带上真正有用的上下文，并核实前一位说的「已完成」
-- 弱模型怎样在强模型的复核下稳定产出，把成本降下来
-- 多模型并发调用时，怎样控制费用、及时取消
+| [magpie-community/plugins #646](https://github.com/magpie-community/plugins/pull/646)：council 多模型插件 | 评审中 |
+| [awesome-dsh-plugin #1153](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1153)：收录 dsh-postman | 已合并 |
+| [awesome-deepseek-harness #308](https://github.com/0xsline/awesome-deepseek-harness/pull/308)：收录 dsh-postman | 已合并 |
