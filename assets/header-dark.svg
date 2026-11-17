@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="270" viewBox="0 0 1200 270" role="img" aria-labelledby="title desc">
+<title id="title">ZHOU · AI 应用与开发工具</title>
+<desc id="desc">以 TypeScript 与 Node.js 开发多模型协作工具，展示项目实现和开源贡献。</desc>
+<rect width="1200" height="270" rx="16" fill="#14211C"/>
+<path d="M48 40h52" stroke="#86CBB0" stroke-width="4"/>
+<text x="48" y="120" fill="#EDF4EE" font-family="Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="3">ZHOU</text>
+<text x="50" y="166" fill="#C9DDD0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="27">AI 应用与开发工具</text>
+<text x="50" y="223" fill="#9BB2A3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18">TypeScript · Node.js · 多模型协作</text>
+<g fill="none" stroke="#385247" stroke-width="1.4"><rect x="890" y="43" width="247" height="179" rx="12"/><path d="M914 82h96m-96 24h158m-158 24h132m-132 24h158m-158 24h80"/><path d="m1051 56 20-20 20 20m-20-20v52" stroke="#86CBB0" stroke-width="2.2"/></g>
+</svg>
