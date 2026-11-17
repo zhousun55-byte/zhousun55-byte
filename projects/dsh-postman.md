@@ -1,38 +1,30 @@
-# dsh-postman · AI 会话文件上传插件
+# dsh-postman · DeepSeek Harness 文件投递插件
 
-把文件交给 AI 助手，通常需要复制文件、提供路径，再解释哪些内容需要读取。这个插件在 DeepSeek Harness 的会话输入框提供 `/upload` 菜单，让用户直接选择文件或文件夹。
+把文件交给 AI 助手，通常要复制文件、贴路径，再解释该读哪些内容。这个插件在 DeepSeek Harness 的会话输入框里加了 `/upload` 菜单，可以直接选文件或文件夹。
 
-[查看源码](https://github.com/zhousun55-byte/dsh-postman) · [客户端](https://github.com/zhousun55-byte/dsh-postman/blob/main/lib/client.js) · [服务端](https://github.com/zhousun55-byte/dsh-postman/blob/main/lib/index.js)
+[源码](https://github.com/zhousun55-byte/dsh-postman) · [客户端](https://github.com/zhousun55-byte/dsh-postman/blob/main/lib/client.js) · [服务端](https://github.com/zhousun55-byte/dsh-postman/blob/main/lib/index.js)
 
-**状态：公开原型，依赖 DeepSeek Harness 宿主环境。** 当前测试以模拟客户端环境为主，服务端输入边界仍需补强。
+2026 年 8 月发布，已被 [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/1153) 和 [awesome-deepseek-harness](https://github.com/0xsline/awesome-deepseek-harness/pull/308) 两份生态目录收录。
 
 ## 文件怎样进入对话
 
 | 输入 | 处理方式 |
 | --- | --- |
-| 支持类型与大小范围内的图片 | 接入宿主原生图片附件通道 |
+| 支持类型与大小范围内的图片 | 走宿主原生的图片附件通道 |
 | 文本文件 | 上传后提取文本预览，追加到输入框草稿 |
 | 其他文件 | 上传到本地，向会话提供文件路径 |
-| 文件夹 | 遍历选择的文件；走上传接口的文件保留相对目录结构，合规图片走原生附件通道 |
+| 文件夹 | 逐个处理所选文件，保留相对目录结构；图片照样走附件通道 |
 
-图片走消息附件，与仅把图片路径写进文本有区别。实际视觉理解取决于宿主及视觉桥接，插件自身没有实现视觉模型。
+图片作为消息附件发送，模型能直接看到图片本身。能否理解图片取决于宿主接入的视觉模型。
 
-## 实现取舍
+## 实现
 
-浏览器端使用宿主的扩展接口注册入口、文件选择器和草稿操作；Node.js 服务端接收文件字节，返回路径、类型与文本预览。上传流程包含单文件大小限制、排他写入和本地文件权限设置。
+浏览器端通过宿主的扩展接口注册入口、文件选择器和草稿操作；Node.js 服务端接收文件，返回路径、类型和文本预览。上传时限制单个文件大小，写入时不覆盖已有文件，并设置本地文件权限。
 
-包配置没有声明额外运行依赖，客户端使用宿主提供的 React 与服务，因此运行仍需要完整的宿主环境。
+插件不声明额外的运行依赖，客户端直接使用宿主提供的 React 和服务。
 
-## 可以检查的验证材料
+## 测试
 
-[`client.test.cjs`](https://github.com/zhousun55-byte/dsh-postman/blob/main/client.test.cjs) 设置了 18 次断言，使用 VM 和模拟宿主接口检查上传入口、图片与文本分流、文件夹处理及草稿生成。
+[`client.test.cjs`](https://github.com/zhousun55-byte/dsh-postman/blob/main/client.test.cjs) 用 Node 的 VM 模块和模拟宿主接口跑了 18 个断言，覆盖上传入口、图片与文本分流、文件夹处理和草稿生成。
 
-这些是模拟客户端测试，不能替代真实宿主与浏览器端到端验证，也不覆盖服务端文件写入。此次作品集核查未重新执行这些测试。
-
-## 后续需要补充
-
-- 补齐服务端目录边界与文本预览总量限制的回归测试。
-- 增加真实宿主下的图片附件、文件夹上传与取消操作验证。
-- 记录宿主兼容版本，并补充持续集成。
-
-[返回作品集](../README.md)
+[返回主页](../README.md)

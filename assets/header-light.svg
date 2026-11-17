@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="270" viewBox="0 0 1200 270" role="img" aria-labelledby="title desc">
-<title id="title">ZHOU · AI 应用与开发工具</title>
-<desc id="desc">以 TypeScript 与 Node.js 开发多模型协作工具，展示项目实现和开源贡献。</desc>
-<rect width="1200" height="270" rx="16" fill="#F4F5F2"/>
-<path d="M48 40h52" stroke="#285F50" stroke-width="4"/>
-<text x="48" y="120" fill="#192822" font-family="Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="3">ZHOU</text>
-<text x="50" y="166" fill="#334C41" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="27">AI 应用与开发工具</text>
-<text x="50" y="223" fill="#596B61" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18">TypeScript · Node.js · 多模型协作</text>
-<g fill="none" stroke="#C8D6CD" stroke-width="1.4"><rect x="890" y="43" width="247" height="179" rx="12"/><path d="M914 82h96m-96 24h158m-158 24h132m-132 24h158m-158 24h80"/><path d="m1051 56 20-20 20 20m-20-20v52" stroke="#285F50" stroke-width="2.2"/></g>
+<title id="title">ZHOU · 把模型当成一个团队来用</title>
+<desc id="desc">AI 应用开发、AI 产品和 AI 工作流方向的作品主页。</desc>
+<defs><pattern id="g" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#e3e2dc"/></pattern></defs>
+<rect width="1200" height="270" rx="16" fill="#fafaf8"/>
+<rect width="1200" height="270" rx="16" fill="url(#g)"/>
+<rect x="0.5" y="0.5" width="1199" height="269" rx="16" fill="none" stroke="#e6e5e0"/>
+<circle cx="58" cy="58" r="8" fill="#d93a2b"/>
+<text x="76" y="66" fill="#141414" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', sans-serif" font-size="22" font-weight="700" letter-spacing="3">ZHOU</text>
+<text x="48" y="152" fill="#141414" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', sans-serif" font-size="52" font-weight="700">把模型当成一个团队来用</text>
+<rect x="48" y="160" width="252" height="10" fill="#d93a2b" opacity=".25"/>
+<text x="50" y="222" fill="#8a8a86" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', sans-serif" font-size="20" letter-spacing="2">AI 应用开发 · AI 产品 · AI 工作流</text>
 </svg>
