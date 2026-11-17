@@ -3,7 +3,9 @@
   <img src="assets/header-light.svg" alt="ZHOU · AI 应用与开发工具" width="100%">
 </picture>
 
-**做让多个 AI 模型协同干活的工具。** 独立设计并实现了多模型编程协作平台「接力台」（约 2.5 万行 TypeScript / JavaScript，191 项自动化测试），并向 AI 编程工具生态贡献插件与 PR。正在寻找 **AI 应用开发 / AI 工具开发** 岗位。
+**做让多个 AI 模型协同干活的工具。** 独立设计并实现了多模型编程协作平台「接力台」（约 2.5 万行 TypeScript / JavaScript，191 项自动化测试）、多模型会审插件 council，并向 AI 编程工具生态贡献插件与 PR。正在寻找 **AI 应用开发 / AI 工具开发** 岗位。
+
+🌐 **作品集网站：[zhousun55-byte.github.io](https://zhousun55-byte.github.io)**（带界面截图）
 
 <p>
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
@@ -25,6 +27,12 @@
 - **工程质量**：命令行 + 本地网页（中英双语、深色模式、窄屏适配），191 项测试覆盖调度、解析、隔离与安全反例
 
 [设计与实现 →](projects/relaydesk.md)　·　源码私有，面试可现场演示
+
+### 🗳️ council — 多模型会审插件（MCP）
+
+给 magpie 写的 MCP 工具：几个模型同问一个问题、匿名投票，或请另一家的模型评审代码。零配置，每个模型走自己的原生接口，按故障类型自动冷却、慢模型自动找替身。25 项测试，CI 通过。
+
+[源码 →](https://github.com/zhousun55-byte/magpie-council)　·　[上游 PR #646](https://github.com/magpie-community/plugins/pull/646)
 
 ### 📎 dsh-postman — DeepSeek Harness 文件投递插件
 
